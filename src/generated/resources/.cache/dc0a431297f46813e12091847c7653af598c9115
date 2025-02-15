@@ -1,0 +1,12 @@
+// 1.20.1	2025-02-14T11:19:18.3316189	Tags for minecraft:block mod id shroomscape
+6804a6fd8d64c3d2ed857d9232b6ea77778cf07e data/minecraft/tags/blocks/buttons.json
+5e134b2e7fe86e5b139edbe2539d022cffdd8915 data/minecraft/tags/blocks/doors.json
+b72deeb178cdc40521b39b81564476f605005c57 data/minecraft/tags/blocks/fences.json
+c767d9f871002719901f12b5f468346c239351e6 data/minecraft/tags/blocks/fence_gates.json
+c0bcc68425785c12343a279b5383583579943a19 data/minecraft/tags/blocks/mineable/axe.json
+74d555cf6a617198e7550d22c9f6e6c6c83c4533 data/minecraft/tags/blocks/mineable/pickaxe.json
+d08b18282bba75701a0c44412f5e4fc6193bd8ee data/minecraft/tags/blocks/pressure_plates.json
+bb01e0c870c8f2d29a5a41f28b283b4a8a956aef data/minecraft/tags/blocks/slabs.json
+ded0d8db560d36c35cd47b776685803b272bbd9d data/minecraft/tags/blocks/stairs.json
+345f2ea1d8866672fe9b85680211cf761763156d data/minecraft/tags/blocks/trapdoors.json
+6a3057ff6854b4996a50483bc2222be942606009 data/minecraft/tags/blocks/walls.json

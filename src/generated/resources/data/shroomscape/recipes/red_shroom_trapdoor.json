@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "shroomcraft",
+  "key": {
+    "#": {
+      "item": "minecraft:red_mushroom_block"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "shroomscape:red_shroom_trapdoor"
+  },
+  "show_notification": true
+}

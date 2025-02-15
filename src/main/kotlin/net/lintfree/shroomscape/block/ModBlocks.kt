@@ -1,6 +1,6 @@
 package net.lintfree.shroomscape.block
 
-import net.lintfree.shroomscape.ShroomScape
+import net.lintfree.shroomscape.ShroomScape.ID
 import net.lintfree.shroomscape.item.ModItems
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.item.BlockItem
@@ -15,19 +15,19 @@ import net.minecraftforge.registries.RegistryObject
 import java.util.function.Supplier
 
 object ModBlocks {
-        val BLOCK_REGISTRY: DeferredRegister<Block> = DeferredRegister.create(ForgeRegistries.BLOCKS, ShroomScape.ID)
+    val BLOCK_REGISTRY: DeferredRegister<Block> = DeferredRegister.create(ForgeRegistries.BLOCKS, ID)
 
-    val RED_SHROOM_STAIRS = registerBlock("red_shroom_stairs") { ->
+    val RED_SHROOM_STAIRS : RegistryObject<Block> = registerBlock("red_shroom_stairs") { ->
         StairBlock({RED_MUSHROOM_BLOCK.defaultBlockState()}, BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val BROWN_SHROOM_STAIRS = registerBlock("brown_shroom_stairs") { ->
+    val BROWN_SHROOM_STAIRS : RegistryObject<Block> = registerBlock("brown_shroom_stairs") { ->
         StairBlock({BROWN_MUSHROOM_BLOCK.defaultBlockState()}, BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
             .sound(SoundType.FUNGUS))
     }
 
-    val SHROOM_STEM_STAIRS = registerBlock("shroom_stem_stairs") { ->
+    val SHROOM_STEM_STAIRS : RegistryObject<Block> = registerBlock("shroom_stem_stairs") { ->
         StairBlock({RED_MUSHROOM_BLOCK.defaultBlockState()}, BlockBehaviour.Properties.copy(MUSHROOM_STEM)
             .sound(SoundType.FUNGUS))
     }
@@ -125,37 +125,53 @@ object ModBlocks {
         WallBlock(BlockBehaviour.Properties.copy(MUSHROOM_STEM).sound(SoundType.FUNGUS))
     }
 
-    val  RED_SHROOM_DOOR: RegistryObject<Block> = registerBlock("red_shroom_door") {
-        DoorBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
+    val  RED_SHROOM_DOOR: RegistryObject<DoorBlock> = registerBlock("red_shroom_door") {
+        DoorBlock(BlockBehaviour.Properties.of()
+            .strength(3.0f)
             .sound(SoundType.FUNGUS)
-            .noOcclusion(), BlockSetType.BAMBOO)
+            .noOcclusion(),
+            BlockSetType.BAMBOO)
     }
 
-    val  BROWN_SHROOM_DOOR: RegistryObject<Block> = registerBlock("brown_shroom_door") {
-        DoorBlock(BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
+    val  BROWN_SHROOM_DOOR: RegistryObject<DoorBlock> = registerBlock("brown_shroom_door") {
+        DoorBlock(BlockBehaviour.Properties.of()
+            .strength(3.0f)
             .sound(SoundType.FUNGUS)
-            .noOcclusion(), BlockSetType.BAMBOO)
+            .noOcclusion(),
+            BlockSetType.BAMBOO)
     }
 
-    val  SHROOM_STEM_DOOR: RegistryObject<Block> = registerBlock("shroom_stem_door") {
-        DoorBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
+    val  SHROOM_STEM_DOOR: RegistryObject<DoorBlock> = registerBlock("shroom_stem_door") {
+        DoorBlock(BlockBehaviour.Properties.of()
+            .strength(3.0f)
             .sound(SoundType.FUNGUS)
-            .noOcclusion(), BlockSetType.BAMBOO)
+            .noOcclusion(),
+            BlockSetType.BAMBOO)
     }
 
-    val RED_SHROOM_TRAPDOOR: RegistryObject<Block> = registerBlock("red_shroom_trapdoor") {
-        TrapDoorBlock(BlockBehaviour.Properties.copy(RED_MUSHROOM_BLOCK)
-            .sound(SoundType.FUNGUS).noOcclusion(), BlockSetType.BAMBOO)
+    val RED_SHROOM_TRAPDOOR: RegistryObject<TrapDoorBlock> = registerBlock("red_shroom_trapdoor") {
+        TrapDoorBlock(BlockBehaviour.Properties.of()
+            .sound(SoundType.FUNGUS)
+            .noOcclusion()
+            .strength(3.0f),
+            BlockSetType.BAMBOO)
     }
 
-    val BROWN_SHROOM_TRAPDOOR: RegistryObject<Block> = registerBlock("brown_shroom_trapdoor") {
-        TrapDoorBlock(BlockBehaviour.Properties.copy(BROWN_MUSHROOM_BLOCK)
-            .sound(SoundType.FUNGUS).noOcclusion(), BlockSetType.BAMBOO)
+    val BROWN_SHROOM_TRAPDOOR: RegistryObject<TrapDoorBlock> = registerBlock("brown_shroom_trapdoor") {
+        TrapDoorBlock(BlockBehaviour.Properties.of()
+            .sound(SoundType.FUNGUS)
+            .noOcclusion()
+            .strength(3.0f),
+            BlockSetType.BAMBOO)
+
     }
 
-    val SHROOM_STEM_TRAPDOOR: RegistryObject<Block> = registerBlock("shroom_stem_trapdoor") {
-        TrapDoorBlock(BlockBehaviour.Properties.copy(MUSHROOM_STEM)
-            .sound(SoundType.FUNGUS).noOcclusion(), BlockSetType.BAMBOO)
+    val SHROOM_STEM_TRAPDOOR: RegistryObject<TrapDoorBlock> = registerBlock("shroom_stem_trapdoor") {
+        TrapDoorBlock(BlockBehaviour.Properties.of()
+            .sound(SoundType.FUNGUS)
+            .noOcclusion()
+            .strength(3.0f),
+            BlockSetType.BAMBOO)
     }
 
     private fun <T : Block?> registerBlock(blockName: String, blockSupplier: Supplier<T>): RegistryObject<T> {

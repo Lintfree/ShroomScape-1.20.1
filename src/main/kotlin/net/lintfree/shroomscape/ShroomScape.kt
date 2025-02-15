@@ -2,17 +2,22 @@ package net.lintfree.shroomscape
 
 import net.lintfree.shroomscape.block.ModBlocks
 import net.lintfree.shroomscape.item.ModItems
-import net.lintfree.shroomscape.tabs.ShroomTab
+import net.lintfree.shroomscape.tabs.ModCreativeModeTabs
 import net.minecraft.client.Minecraft
+import net.minecraft.world.item.CreativeModeTabs
+import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent
+import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import thedarkcolour.kotlinforforge.forge.MOD_BUS
 import thedarkcolour.kotlinforforge.forge.runForDist
+
 
 /**
  * Main mod class. Should be an `object` declaration annotated with `@Mod`.
@@ -24,7 +29,6 @@ import thedarkcolour.kotlinforforge.forge.runForDist
 @Mod(ShroomScape.ID)
 object ShroomScape {
     const val ID = "shroomscape"
-
     // the logger for our mod
     val LOGGER: Logger = LogManager.getLogger(ID)
 
@@ -34,7 +38,9 @@ object ShroomScape {
         // Register the KDeferredRegister to the mod-specific event bus
         ModBlocks.BLOCK_REGISTRY.register(MOD_BUS)
         ModItems.ITEM_REGISTRY.register(MOD_BUS)
-        MOD_BUS.addListener<BuildCreativeModeTabContentsEvent> { event -> ShroomTab().addCreative(event) }
+        ModCreativeModeTabs.register(MOD_BUS)
+        MOD_BUS.addListener(this::addCreative)
+
 
         val obj = runForDist(
             clientTarget = {
@@ -49,21 +55,41 @@ object ShroomScape {
         println(obj)
     }
 
+
+
     /**
      * This is used for initializing client specific
      * things such as renderers and keymaps
      * Fired on the mod specific event bus.
      */
-    private fun onClientSetup(event: FMLClientSetupEvent) {
+    fun onClientSetup(event: FMLClientSetupEvent) {
         LOGGER.log(Level.INFO, "Initializing client...")
     }
 
     /**
      * Fired on the global Forge bus.
      */
-    private fun onServerSetup(event: FMLDedicatedServerSetupEvent) {
+    fun onServerSetup(event: FMLDedicatedServerSetupEvent) {
         LOGGER.log(Level.INFO, "Server starting...")
     }
+
+    @SubscribeEvent
+    fun onCommonSetup(event: FMLCommonSetupEvent) {
+        LOGGER.log(Level.INFO, "Hello! This is working!")
+    }
+
+    private fun addCreative(event: BuildCreativeModeTabContentsEvent) {
+        if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.RED_SHROOM_STAIRS)
+        }
+    }
 }
+
+
+
+
+
+
+
 
 

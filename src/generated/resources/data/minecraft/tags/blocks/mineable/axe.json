@@ -1,0 +1,22 @@
+{
+  "values": [
+    "shroomscape:red_shroom_fence",
+    "shroomscape:brown_shroom_fence",
+    "shroomscape:shroom_stem_fence",
+    "shroomscape:red_shroom_fence_gate",
+    "shroomscape:brown_shroom_fence_gate",
+    "shroomscape:shroom_stem_fence_gate",
+    "shroomscape:red_shroom_button",
+    "shroomscape:brown_shroom_button",
+    "shroomscape:shroom_stem_button",
+    "shroomscape:red_shroom_door",
+    "shroomscape:brown_shroom_door",
+    "shroomscape:shroom_stem_door",
+    "shroomscape:red_shroom_trapdoor",
+    "shroomscape:brown_shroom_trapdoor",
+    "shroomscape:shroom_stem_trapdoor",
+    "shroomscape:red_shroom_pressure_plate",
+    "shroomscape:brown_shroom_pressure_plate",
+    "shroomscape:shroom_stem_pressure_plate"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "shroomscape:block/brown_shroom_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/brown_mushroom_block"
+    },
+    "type=top": {
+      "model": "shroomscape:block/brown_shroom_slab_top"
+    }
+  }
+}

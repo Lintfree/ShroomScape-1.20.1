@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "shroomcraft",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom_block"
+    }
+  ],
+  "result": {
+    "item": "shroomscape:brown_shroom_button"
+  }
+}

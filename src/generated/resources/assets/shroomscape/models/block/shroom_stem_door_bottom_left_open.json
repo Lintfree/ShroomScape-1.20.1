@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "shroomscape:block/shroom_stem_door_bottom",
+    "top": "shroomscape:block/shroom_stem_door_top"
+  }
+}

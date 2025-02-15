@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "shroomcraft",
+  "key": {
+    "#": {
+      "item": "minecraft:brown_mushroom_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "item": "shroomscape:brown_shroom_stairs"
+  },
+  "show_notification": true
+}
