@@ -16,16 +16,6 @@ object DataGenerators {
 		val existingFileHelper = event.existingFileHelper
 		val lookupProvider: CompletableFuture<HolderLookup.Provider> = event.lookupProvider
 
-		/*Loot Tables
-		generator.addProvider(
-			event.includeServer(),
-			LootTableProvider(
-				packOutput, emptySet(),
-				listOf(LootTableProvider.SubProviderEntry(::ModBlockLootTableProvider, LootContextParamSets.BLOCK)),
-				lookupProvider
-			)
-		)*/
-
 		//BlockStates and Models
 		generator.addProvider(event.includeClient(), ModBlockStateProvider(packOutput, existingFileHelper))
 		generator.addProvider(event.includeClient(), ModItemModelProvider(packOutput, existingFileHelper))

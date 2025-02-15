@@ -69,19 +69,7 @@ class ModBlockStateProvider (output: PackOutput, existingFileHelper: ExistingFil
 		trapdoorBlockWithRenderType(ModBlocks.SHROOM_STEM_TRAPDOOR.get(), modLoc("block/shroom_stem_trapdoor"), true, "cutout")
 	}
 
-	fun blockWithItem(blockRegistryObject: RegistryObject<Block>) {
-		simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()))
-	}
-
 	fun blockItem(blockRegistryObject: RegistryObject<Block>) {
 		simpleBlockItem(blockRegistryObject.get(), UncheckedModelFile("shroom_craft:block/" + blockRegistryObject.id.path))
-	}
-
-	fun blockItem(blockRegistryObject: RegistryObject<TrapDoorBlock>, appendix: String) {
-		simpleBlockItem(
-			blockRegistryObject.get(),
-			UncheckedModelFile("shroom_craft:block/" + blockRegistryObject.id.path + appendix)
-			//appendix is used for additional info used in the models like the trapdoor
-		)
 	}
 }

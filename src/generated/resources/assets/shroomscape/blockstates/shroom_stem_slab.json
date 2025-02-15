@@ -4,7 +4,7 @@
       "model": "shroomscape:block/shroom_stem_slab"
     },
     "type=double": {
-      "model": "minecraft:block/mushroom_stem"
+      "model": "minecraft:block/mushroom_stem_inventory"
     },
     "type=top": {
       "model": "shroomscape:block/shroom_stem_slab_top"

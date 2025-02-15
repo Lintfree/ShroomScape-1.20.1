@@ -1,6 +1,5 @@
 package net.lintfree.shroomscape.datagen
 
-import net.lintfree.shroomscape.ShroomScape
 import net.lintfree.shroomscape.ShroomScape.ID
 import net.lintfree.shroomscape.block.ModBlocks
 import net.minecraft.data.PackOutput
@@ -86,15 +85,7 @@ class ModItemModelProvider (output: PackOutput, existingFileHelper: ExistingFile
 	fun trapdoorItem(block: RegistryObject<TrapDoorBlock>) {
 		this.withExistingParent(
 			ForgeRegistries.BLOCKS.getKey(block.get()) !!.path,
-			modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()) !!.getPath() + "_bottom")
+			modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()) !!.path + "_bottom")
 		)
 	}
 }
-
-
-			//ForgeRegistries.BLOCKS.getKey(block.get()) !!.path,
-			//modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get())!!.path + "_bottom")
-
-
-
-

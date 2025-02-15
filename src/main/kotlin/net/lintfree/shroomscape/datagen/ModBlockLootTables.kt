@@ -40,7 +40,4 @@ class ModBlockLootTables : BlockLootSubProvider(emptySet(), FeatureFlags.REGISTR
 	this.add(ModBlocks.BROWN_SHROOM_DOOR.get()) { block -> createDoorTable(ModBlocks.BROWN_SHROOM_DOOR.get()) }
 	this.add(ModBlocks.SHROOM_STEM_DOOR.get()) { block -> createDoorTable(ModBlocks.SHROOM_STEM_DOOR.get()) }
 	}
-
-	//override fun getKnownBlocks(): Iterable<Block?> {
-		//return ModBlocks.getEntries().stream().map(RegistryObject::get)::iterator
 }

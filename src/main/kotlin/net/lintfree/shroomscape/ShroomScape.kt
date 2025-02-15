@@ -5,7 +5,6 @@ import net.lintfree.shroomscape.item.ModItems
 import net.lintfree.shroomscape.tabs.ModCreativeModeTabs
 import net.minecraft.client.Minecraft
 import net.minecraft.world.item.CreativeModeTabs
-import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
