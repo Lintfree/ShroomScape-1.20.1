@@ -4,8 +4,6 @@ Welcome to the ShroomScape Mod!
 This mod adds the unique and vibrant textures of mushrooms found in the base game of Minecraft
 to various building elements such as doors, buttons, trapdoors, walls, fences, and steps.
 
-
-
 ## This mod will automatically apply the following textures to your building elements:
 
 - **Doors**: Transform regular doors into mushroom-themed entrances.

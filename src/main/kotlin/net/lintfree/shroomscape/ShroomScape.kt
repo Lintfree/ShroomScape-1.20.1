@@ -4,8 +4,6 @@ import net.lintfree.shroomscape.block.ModBlocks
 import net.lintfree.shroomscape.item.ModItems
 import net.lintfree.shroomscape.tabs.ModCreativeModeTabs
 import net.minecraft.client.Minecraft
-import net.minecraft.world.item.CreativeModeTabs
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent
@@ -38,8 +36,6 @@ object ShroomScape {
         ModBlocks.BLOCK_REGISTRY.register(MOD_BUS)
         ModItems.ITEM_REGISTRY.register(MOD_BUS)
         ModCreativeModeTabs.register(MOD_BUS)
-        MOD_BUS.addListener(this::addCreative)
-
 
         val obj = runForDist(
             clientTarget = {
@@ -53,8 +49,6 @@ object ShroomScape {
 
         println(obj)
     }
-
-
 
     /**
      * This is used for initializing client specific
@@ -77,11 +71,6 @@ object ShroomScape {
         LOGGER.log(Level.INFO, "Hello! This is working!")
     }
 
-    private fun addCreative(event: BuildCreativeModeTabContentsEvent) {
-        if (event.tabKey === CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.RED_SHROOM_STAIRS)
-        }
-    }
 }
 
 
