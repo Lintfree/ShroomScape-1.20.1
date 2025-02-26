@@ -5,10 +5,13 @@
   "key": {
     "#": {
       "item": "minecraft:brown_mushroom_block"
+    },
+    "s": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "###",
+    "#s#",
     "###"
   ],
   "result": {
