@@ -174,6 +174,7 @@ object ModBlocks {
             BlockSetType.BAMBOO)
     }
 
+
     private fun <T : Block?> registerBlock(blockName: String, blockSupplier: Supplier<T>): RegistryObject<T> {
         val registeredBlock: RegistryObject<T> = BLOCK_REGISTRY.register(blockName, blockSupplier)
         registerBlockItem(blockName, registeredBlock)
